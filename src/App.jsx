@@ -1,7 +1,10 @@
-import './App.css'
-import Navbar from './Components/Navbar.jsx'
-import Hero from './Components/Hero.jsx'
-import About from './Components/About.jsx'
+import Navbar from './Components/Navbar'
+import Hero from './Components/Hero'
+import About from './Components/About'
+import PracticeAreas from './Components/PracticeAreas'
+import WhyChooseUs from './Components/WhyChooseUs'
+import Contact from './Components/Contact'
+import Footer from './Components/Footer'
 
 function App() {
     return (
@@ -9,6 +12,10 @@ function App() {
             <Navbar />
             <Hero />
             <About />
+            <PracticeAreas />
+            <WhyChooseUs />
+            <Contact />
+            <Footer />
         </>
     )
 }
