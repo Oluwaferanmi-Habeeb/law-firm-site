@@ -1,13 +1,23 @@
 function WhyChooseUs() {
     return (
-        <section className="why-us">
-            <h2>Why Choose Us</h2>
-            <p>We combine expert counsel with real-world experience to deliver results.</p>
-            <ul className="why-list">
-                <li>Deep industry knowledge</li>
-                <li>Client-focused legal strategies</li>
-                <li>Proven record of success</li>
-            </ul>
+        <section className="why-us section">
+            <div className="container-wide why-us-layout">
+                <div>
+                    <p className="eyebrow">Why Clients Choose Us</p>
+                    <h2>Results-Driven Counsel With Deep Market Insight</h2>
+                    <p>
+                        We combine specialist legal capability with a practical understanding of business,
+                        policy, and risk to deliver outcomes that stand up in real-world environments.
+                    </p>
+                </div>
+
+                <ul className="why-list">
+                    <li>Sector-focused legal teams</li>
+                    <li>Clear and commercial advice</li>
+                    <li>Fast execution on critical mandates</li>
+                    <li>Strong litigation and deal track record</li>
+                </ul>
+            </div>
         </section>
     )
 }

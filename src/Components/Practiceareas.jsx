@@ -1,42 +1,38 @@
+const areas = [
+    {
+        title: 'Corporate & Commercial Law',
+        text: 'Advising businesses on governance, compliance, transactions, and regulatory issues.',
+    },
+    {
+        title: 'Litigation & Dispute Resolution',
+        text: 'Representing clients in complex disputes with strategy-focused advocacy and execution.',
+    },
+    {
+        title: 'Real Estate & Property Law',
+        text: 'Structuring and documenting acquisitions, development projects, and lease portfolios.',
+    },
+    {
+        title: 'Tax Advisory',
+        text: 'Designing compliant tax strategies for institutions, founders, and private clients.',
+    },
+]
+
 function PracticeAreas() {
     return (
-        <section className="practice-areas">
-            <div className="container">
+        <section className="practice-areas section" id="expertise">
+            <div className="container-wide section-heading">
+                <p className="eyebrow dark">Our Expertise</p>
                 <h2>Practice Areas</h2>
+            </div>
 
-                <div className="areas-grid">
-                    <div className="area-card">
-                        <h3>Corporate & Commercial Law</h3>
-                        <p>
-                            Advising businesses on governance, compliance, contracts,
-                            mergers, and regulatory matters.
-                        </p>
-                    </div>
-
-                    <div className="area-card">
-                        <h3>Litigation & Dispute Resolution</h3>
-                        <p>
-                            Representing clients in complex disputes with strategic and
-                            results-driven advocacy.
-                        </p>
-                    </div>
-
-                    <div className="area-card">
-                        <h3>Real Estate & Property Law</h3>
-                        <p>
-                            Providing legal guidance on acquisitions, leases, and property
-                            development transactions.
-                        </p>
-                    </div>
-
-                    <div className="area-card">
-                        <h3>Tax Advisory</h3>
-                        <p>
-                            Delivering comprehensive tax planning and compliance solutions
-                            for businesses and individuals.
-                        </p>
-                    </div>
-                </div>
+            <div className="container-wide areas-grid">
+                {areas.map((area) => (
+                    <article className="area-card" key={area.title}>
+                        <h3>{area.title}</h3>
+                        <p>{area.text}</p>
+                        <a href="#contact">Read More</a>
+                    </article>
+                ))}
             </div>
         </section>
     )
