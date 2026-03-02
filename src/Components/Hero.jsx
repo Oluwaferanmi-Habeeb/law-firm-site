@@ -10,21 +10,27 @@ function Hero() {
     useEffect(() => {
         const interval = setInterval(() => {
             setCurrentIndex((prev) => (prev + 1) % images.length)
-        }, 6000) // 6 seconds per image
+        }, 6000)
 
         return () => clearInterval(interval)
     }, [])
 
     return (
-        <section
-            className="hero"
-            style={{
-                backgroundImage: `url(${images[currentIndex]})`
-            }}
-        >
+        <section className="hero">
+            {images.map((image, index) => (
+                <div
+                    key={index}
+                    className={`hero-slide ${
+                        index === currentIndex ? "active" : ""
+                    }`}
+                    style={{ backgroundImage: `url(${image})` }}
+                />
+            ))}
+
             <div className="overlay">
                 <div className="hero-content">
                     <h1>Trusted Legal Expertise</h1>
+                    <div className="hero-line"></div>
                     <p>
                         Delivering strategic and professional legal services tailored to your needs.
                     </p>
