@@ -10,7 +10,7 @@ function Hero() {
                 <div className="hero-content">
                     <h1>Trusted Legal Expertise</h1>
                     <p>
-                        Providing you with a reliable and professional legal services tailored to your needs. Now available for online consultations!
+                        Delivering strategic and professional legal services tailored to your needs.
                     </p>
                     <button>Book Consultation</button>
                 </div>

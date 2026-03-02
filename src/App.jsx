@@ -3,8 +3,9 @@ import Hero from './Components/Hero'
 import About from './Components/About'
 import PracticeAreas from './Components/PracticeAreas'
 import WhyChooseUs from './Components/WhyChooseUs'
-import Contact from './Components/Contact'
-import Footer from './Components/Footer'
+import Contact from './Components/Contact.jsx'
+import Footer from './Components/Footer.jsx'
+import './App.css'
 
 function App() {
     return (
