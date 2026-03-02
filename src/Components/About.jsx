@@ -4,17 +4,17 @@ function About() {
             <div className="container-wide about-grid">
                 <div>
                     <p className="eyebrow dark">Who We Are</p>
-                    <h2>Commercially Grounded. Internationally Competitive.</h2>
+                    <h2>Commercially Grounded. Professionally Driven.</h2>
                 </div>
 
                 <div className="about-copy">
                     <p>
-                        Joseph Idemudia & Company is a modern law firm delivering legal and strategic support
-                        across corporate, finance, and dispute resolution matters.
+                        Joseph Idemudia & Company provides legal advisory services across corporate,
+                        commercial, and dispute resolution matters.
                     </p>
                     <p>
-                        Our teams combine technical depth with practical business insight, helping clients move
-                        from complexity to confident decisions.
+                        We combine technical legal depth with practical business judgment to support
+                        sound, timely decisions.
                     </p>
                 </div>
             </div>

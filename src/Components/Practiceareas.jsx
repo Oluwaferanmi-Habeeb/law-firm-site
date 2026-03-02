@@ -1,19 +1,19 @@
 const areas = [
     {
         title: 'Corporate & Commercial Law',
-        text: 'Advising businesses on governance, compliance, transactions, and regulatory issues.',
+        text: 'Advising on governance, contracts, compliance, and key commercial transactions.',
     },
     {
         title: 'Litigation & Dispute Resolution',
-        text: 'Representing clients in complex disputes with strategy-focused advocacy and execution.',
+        text: 'Representing clients in complex disputes with disciplined and strategic advocacy.',
     },
     {
         title: 'Real Estate & Property Law',
-        text: 'Structuring and documenting acquisitions, development projects, and lease portfolios.',
+        text: 'Supporting acquisitions, leases, title reviews, and development transactions.',
     },
     {
         title: 'Tax Advisory',
-        text: 'Designing compliant tax strategies for institutions, founders, and private clients.',
+        text: 'Providing practical tax planning and regulatory compliance support.',
     },
 ]
 
@@ -30,7 +30,7 @@ function PracticeAreas() {
                     <article className="area-card" key={area.title}>
                         <h3>{area.title}</h3>
                         <p>{area.text}</p>
-                        <a href="#contact">Read More</a>
+                        <a href="#/contact">Read More</a>
                     </article>
                 ))}
             </div>

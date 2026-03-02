@@ -4,18 +4,18 @@ function WhyChooseUs() {
             <div className="container-wide why-us-layout">
                 <div>
                     <p className="eyebrow">Why Clients Choose Us</p>
-                    <h2>Results-Driven Counsel With Deep Market Insight</h2>
+                    <h2>Reliable Legal Support For Critical Decisions</h2>
                     <p>
-                        We combine specialist legal capability with a practical understanding of business,
-                        policy, and risk to deliver outcomes that stand up in real-world environments.
+                        We deliver clear legal advice, practical risk analysis, and efficient execution
+                        on high-value instructions.
                     </p>
                 </div>
 
                 <ul className="why-list">
-                    <li>Sector-focused legal teams</li>
-                    <li>Clear and commercial advice</li>
-                    <li>Fast execution on critical mandates</li>
-                    <li>Strong litigation and deal track record</li>
+                    <li>Experienced cross-functional legal teams</li>
+                    <li>Practical and commercially sound advice</li>
+                    <li>Consistent delivery on urgent mandates</li>
+                    <li>Strong record in transactions and disputes</li>
                 </ul>
             </div>
         </section>

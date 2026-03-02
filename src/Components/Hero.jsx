@@ -6,18 +6,18 @@ import hero3 from '../assets/hero3.jpg'
 const slides = [
     {
         image: hero1,
-        title: 'Redefining What Is Possible',
-        subtitle: 'Setting new standards in legal excellence.',
+        title: 'Trusted Counsel For Complex Matters',
+        subtitle: 'Commercially focused legal advisory for institutions and private clients.',
     },
     {
         image: hero2,
-        title: 'Where Innovation Leads',
-        subtitle: 'Strategic counsel for high-stakes business decisions.',
+        title: 'Strategic Advice. Clear Outcomes.',
+        subtitle: 'Supporting critical decisions with precision, discipline, and speed.',
     },
     {
         image: hero3,
-        title: 'Beyond The Precedent',
-        subtitle: 'Practical legal solutions for complex matters.',
+        title: 'Built On Excellence And Integrity',
+        subtitle: 'Delivering dependable representation across transactions and disputes.',
     },
 ]
 
@@ -49,8 +49,8 @@ function Hero() {
                     <h1>{slides[currentIndex].title}</h1>
                     <p className="hero-subtitle">{slides[currentIndex].subtitle}</p>
                     <div className="hero-actions">
-                        <a href="#about" className="btn btn-primary">Learn More</a>
-                        <a href="#contact" className="btn btn-outline">Book Consultation</a>
+                        <a href="#/about" className="btn btn-primary">Learn More</a>
+                        <a href="#/contact" className="btn btn-outline">Book Consultation</a>
                     </div>
                 </div>
             </div>
