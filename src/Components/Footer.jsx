@@ -3,25 +3,26 @@ function Footer() {
         <footer className="footer">
             <div className="container-wide footer-grid">
                 <div>
-                    <h3>Joseph Idemudia & Co.</h3>
-                    <p>Business-focused legal advisory for ambitious organizations.</p>
+                    <h3>JOSEPH IDEMUDIA & CO.</h3>
+                    <p>Legal Practitioners & Consultants.</p>
                     <p><a href="#/resources">Resources</a></p>
                     <p><a href="#/careers">Careers</a></p>
                 </div>
 
                 <div>
-                    <h4>Practice Areas</h4>
-                    <p>Corporate Law</p>
-                    <p>Litigation</p>
-                    <p>Real Estate</p>
-                    <p>Tax Advisory</p>
+                    <h4>Our Practice</h4>
+                    <p>Civil Litigation and Arbitration</p>
+                    <p>Corporate Commercial</p>
+                    <p>Banking and Finance</p>
+                    <p>Family and Probate Matters</p>
                 </div>
 
                 <div>
                     <h4>Get In Touch</h4>
-                    <p>asineidemudia@yahoo.com</p>
-                    <p>+234 800 000 0000</p>
-                    <p>513/515, Suite 83 Ikorodu Road, Asucon Plaza, Ketu, Lagos</p>
+                    <p>josephidemudiaandco@yahoo.com</p>
+                    <p>08055147009, 07060558979</p>
+                    <p>07086508404, 08067053452</p>
+                    <p>Suite 82, Asucon Plaza, 513/515 Ikorodu Road, Ketu, Lagos</p>
                     <p>
                         <a href="https://www.linkedin.com/in/jic-property-2a61b8233" target="_blank" rel="noreferrer">
                             LinkedIn Profile

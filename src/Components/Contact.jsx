@@ -4,16 +4,18 @@ function Contact() {
             <div className="container-wide contact-layout">
                 <div>
                     <p className="eyebrow dark">Contact</p>
-                    <h2>Speak With Our Team</h2>
+                    <h2>Joseph Idemudia & Co.</h2>
                     <p>
-                        Contact us for confidential legal support. We respond promptly to all inquiries.
+                        Suite 82, Asucon Plaza, 513/515 Ikorodu Road, Ketu, Lagos.
                     </p>
                 </div>
 
                 <div className="contact-card">
-                    <p><strong>Email:</strong> asineidemudia@yahoo.com</p>
-                    <p><strong>Phone:</strong> +234 800 000 0000</p>
-                    <p><strong>Office:</strong> 513/515, Suite 83 Ikorodu Road, Asucon Plaza, Ketu, Lagos</p>
+                    <p><strong>Email:</strong> josephidemudiaandco@yahoo.com</p>
+                    <p><strong>Tell:</strong> 08055147009</p>
+                    <p><strong>Tell:</strong> 07060558979</p>
+                    <p><strong>Tell:</strong> 07086508404</p>
+                    <p><strong>Tell:</strong> 08067053452</p>
                     <p>
                         <strong>LinkedIn:</strong>{' '}
                         <a
@@ -25,7 +27,7 @@ function Contact() {
                             JIC Property
                         </a>
                     </p>
-                    <a href="mailto:asineidemudia@yahoo.com" className="btn btn-primary">Send Email</a>
+                    <a href="mailto:josephidemudiaandco@yahoo.com" className="btn btn-primary">Send Email</a>
                 </div>
             </div>
         </section>

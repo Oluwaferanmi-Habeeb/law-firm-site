@@ -6,7 +6,7 @@ const previews = [
     },
     {
         title: 'Our People',
-        text: 'Managing partners and associates.',
+        text: 'Managing partner, partners, and leadership team.',
         href: '#/people',
     },
     {
@@ -15,13 +15,13 @@ const previews = [
         href: '#/expertise',
     },
     {
-        title: 'Industries',
-        text: 'Sector experience across business-critical markets.',
+        title: 'Client Profile',
+        text: 'Local and multinational corporations, institutions, and individuals.',
         href: '#/industries',
     },
     {
-        title: 'Representative Matters',
-        text: 'Selected mandates and anonymized highlights.',
+        title: 'Firm Strength',
+        text: 'Litigation and advisory capability across multiple forums.',
         href: '#/matters',
     },
     {

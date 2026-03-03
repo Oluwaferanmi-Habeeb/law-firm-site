@@ -1,19 +1,53 @@
 const areas = [
     {
-        title: 'Corporate & Commercial Law',
-        text: 'Advising on governance, contracts, compliance, and key commercial transactions.',
+        title: 'Civil Litigation and Arbitration',
+        summary:
+            'Strong litigation and arbitration advisory across civil, criminal, and commercial matters, including complex multi-forum disputes.',
     },
     {
-        title: 'Litigation & Dispute Resolution',
-        text: 'Representing clients in complex disputes with disciplined and strategic advocacy.',
+        title: 'Corporate Commercial',
+        summary:
+            'Commercially-focused support on contracts, restructuring, joint ventures, strategic alliances, and corporate transactions.',
     },
     {
-        title: 'Real Estate & Property Law',
-        text: 'Supporting acquisitions, leases, title reviews, and development transactions.',
+        title: 'Banking and Finance',
+        summary:
+            'Advisory on acquisition, project, and trade finance, security documentation, debt instruments, insolvency, and restructuring.',
     },
     {
-        title: 'Tax Advisory',
-        text: 'Providing practical tax planning and regulatory compliance support.',
+        title: 'Family and Probate Matters',
+        summary:
+            'Experience across succession planning, estate administration, wills, trusts, and related contentious matters.',
+    },
+    {
+        title: 'Real Estate and Construction',
+        summary:
+            'Coordinated legal support on conveyancing, property tax, permits, licenses, construction issues, and dispute resolution.',
+    },
+    {
+        title: 'Employment and Labour',
+        summary:
+            'Integrated advisory from recruitment to retirement, including labour compliance, collective bargaining, and union-related matters.',
+    },
+    {
+        title: 'Oil and Gas',
+        summary:
+            'Legal advisory on joint venture arrangements, operating documentation, regulatory issues, and licensing in the Nigerian sector.',
+    },
+    {
+        title: 'Immigration',
+        summary:
+            'Support for work and residence permits, investment incentives for foreigners, and cross-border immigration coordination.',
+    },
+    {
+        title: 'Company Secretarial Services',
+        summary:
+            'Company secretarial support ensuring governance, decisions, and operations align with the Companies and Allied Matters Act.',
+    },
+    {
+        title: 'Regulatory Compliance',
+        summary:
+            'Regulatory and tax compliance support, policy guidance, and engagement with regulators to mitigate legal and operational risk.',
     },
 ]
 
@@ -22,16 +56,24 @@ function PracticeAreas() {
         <section className="practice-areas section" id="expertise">
             <div className="container-wide section-heading">
                 <p className="eyebrow dark">Our Expertise</p>
-                <h2>Practice Areas</h2>
+                <h2>Our Practice Covers The Following Areas</h2>
             </div>
 
             <div className="container-wide areas-grid">
                 {areas.map((area) => (
                     <article className="area-card" key={area.title}>
                         <h3>{area.title}</h3>
-                        <p>{area.text}</p>
-                        <a href="#/contact">Read More</a>
+                        <a href="#practice-notes">View Note</a>
                     </article>
+                ))}
+            </div>
+
+            <div className="container-wide practice-notes" id="practice-notes">
+                {areas.map((area) => (
+                    <details className="practice-note" key={`note-${area.title}`}>
+                        <summary>{area.title}</summary>
+                        <p>{area.summary}</p>
+                    </details>
                 ))}
             </div>
         </section>

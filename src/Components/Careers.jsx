@@ -14,7 +14,7 @@ function Careers() {
                     To apply, please send your CV and a brief cover note to the firm email.
                 </p>
                 <p>
-                    <a href="mailto:asineidemudia@yahoo.com">asineidemudia@yahoo.com</a>
+                    <a href="mailto:josephidemudiaandco@yahoo.com">josephidemudiaandco@yahoo.com</a>
                 </p>
             </div>
         </section>
