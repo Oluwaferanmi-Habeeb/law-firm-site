@@ -52,6 +52,14 @@ const areas = [
 ]
 
 function PracticeAreas() {
+    const scrollToNotes = (event) => {
+        event.preventDefault()
+        const notes = document.getElementById('practice-notes')
+        if (notes) {
+            notes.scrollIntoView({ behavior: 'smooth', block: 'start' })
+        }
+    }
+
     return (
         <section className="practice-areas section" id="expertise">
             <div className="container-wide section-heading">
@@ -63,7 +71,7 @@ function PracticeAreas() {
                 {areas.map((area) => (
                     <article className="area-card" key={area.title}>
                         <h3>{area.title}</h3>
-                        <a href="#practice-notes">View Note</a>
+                        <a href="#practice-notes" onClick={scrollToNotes}>View Note</a>
                     </article>
                 ))}
             </div>
