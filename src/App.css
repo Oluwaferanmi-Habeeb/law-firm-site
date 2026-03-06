@@ -33,6 +33,35 @@ a {
   text-decoration: none;
 }
 
+.skip-link {
+  position: absolute;
+  left: 12px;
+  top: -48px;
+  background: #111;
+  color: #fff;
+  padding: 10px 14px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+input,
+textarea,
+button,
+a {
+  outline: none;
+}
+
+input:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible {
+  box-shadow: 0 0 0 3px rgba(221, 197, 162, 0.45);
+  border-radius: 2px;
+}
+
 .container-wide {
   width: min(1160px, 92vw);
   margin: 0 auto;
@@ -40,6 +69,21 @@ a {
 
 .section {
   padding: 80px 0;
+}
+
+.route-fade {
+  animation: routeFadeIn 860ms cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+@keyframes routeFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .eyebrow {
@@ -76,6 +120,12 @@ a {
   color: #d8d8d8;
 }
 
+.topbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -103,6 +153,10 @@ a {
   padding-bottom: 2px;
 }
 
+.nav-links a[aria-current='page'] {
+  color: #f5dfbe;
+}
+
 .nav-links a::after {
   content: '';
   position: absolute;
@@ -119,6 +173,17 @@ a {
 .nav-links a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
+}
+
+.ui-icon {
+  width: 14px;
+  height: 14px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  flex-shrink: 0;
 }
 
 .hero {
@@ -656,6 +721,58 @@ a {
   gap: 34px;
 }
 
+.contact-form {
+  margin-top: 20px;
+  display: grid;
+  gap: 8px;
+  background: #fff;
+  border: 1px solid #d3c4b0;
+  padding: 18px;
+}
+
+.contact-form label {
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #4f5966;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  font: inherit;
+  font-size: 0.95rem;
+  color: #1c1c1c;
+  border: 1px solid #cfc5b6;
+  padding: 10px 11px;
+  background: #fff;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.form-feedback {
+  margin-top: 4px;
+  font-size: 0.86rem;
+}
+
+.form-feedback.ok {
+  color: #1f5f2b;
+}
+
+.form-feedback.err {
+  color: #8a2929;
+}
+
 .contact-card {
   background: #f3ece1;
   border: 1px solid #d3c4b0;
@@ -669,6 +786,12 @@ a {
 .contact-card .btn {
   margin-top: 8px;
   width: fit-content;
+}
+
+.contact-meta {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
 }
 
 .text-link {
@@ -812,6 +935,10 @@ a {
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .route-fade {
+    animation: none;
+  }
+
   .team-members-grid .reveal-card,
   .team.is-visible .corner-1,
   .team.is-visible .corner-2,
