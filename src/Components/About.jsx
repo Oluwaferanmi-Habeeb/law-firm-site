@@ -9,13 +9,12 @@ function About() {
 
                 <div className="about-copy">
                     <p>
-                        Joseph Idemudia and Company is a law firm based in Lagos, Nigeria, having a spectrum of
-                        cross-border law practice that caters for local and multinational corporations, financial
-                        institutions, government entities, as well as private businesses and individuals around the globe.
+                        Joseph Idemudia and Company is a Lagos-based law firm with cross-border capability, serving
+                        corporations, financial institutions, government entities, private businesses, and individuals.
                     </p>
                     <p>
-                        We put the quality of the service that we offer our clients above all else. We know what is
-                        important to our clients, and that knowledge and execution is what sets us apart from other firms.
+                        We prioritize service quality, practical legal strategy, and disciplined execution on every
+                        brief.
                     </p>
                 </div>
             </div>

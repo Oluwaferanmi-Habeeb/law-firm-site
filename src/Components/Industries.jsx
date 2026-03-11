@@ -13,6 +13,9 @@ function Industries() {
             <div className="container-wide section-heading">
                 <p className="eyebrow dark">Client Profile</p>
                 <h2>Who We Serve</h2>
+                <p className="section-intro">
+                    We support institutions and private clients across local and cross-border matters.
+                </p>
             </div>
 
             <div className="container-wide industries-grid">

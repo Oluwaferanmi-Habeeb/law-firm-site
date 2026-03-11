@@ -17,6 +17,12 @@ import Footer from './Components/Footer.jsx'
 import { initAnalytics, initErrorReporting, trackPageView } from './lib/telemetry'
 import './App.css'
 
+const getSiteUrl = () => {
+    const envSiteUrl = import.meta.env.VITE_SITE_URL || ''
+    const normalizedEnv = envSiteUrl.replace(/\/+$/, '')
+    return normalizedEnv || window.location.origin
+}
+
 const ROUTE_CONFIG = {
     '/': {
         title: 'JOSEPH IDEMUDIA & CO. | Legal Practitioners & Consultants',
@@ -127,25 +133,51 @@ function App() {
     }, [])
 
     useEffect(() => {
+        const siteUrl = getSiteUrl()
+        const ogImage = `${siteUrl}/og-image.jpg`
+
         if (!isKnownRoute) {
-            document.title = 'Page Not Found | JOSEPH IDEMUDIA & CO.'
-            upsertMeta('meta[name="description"]', 'name', 'description', 'The page you requested does not exist.')
-            upsertMeta('meta[property="og:title"]', 'property', 'og:title', 'Page Not Found | JOSEPH IDEMUDIA & CO.')
-            upsertMeta('meta[property="og:description"]', 'property', 'og:description', 'The page you requested does not exist.')
-            upsertCanonical(`${window.location.origin}/#/404`)
+            const title = 'Page Not Found | JOSEPH IDEMUDIA & CO.'
+            const description = 'The page you requested does not exist.'
+            const canonical = `${siteUrl}/#/404`
+
+            document.title = title
+            upsertMeta('meta[name="description"]', 'name', 'description', description)
+            upsertMeta('meta[name="robots"]', 'name', 'robots', 'noindex, follow')
+            upsertMeta('meta[property="og:type"]', 'property', 'og:type', 'website')
+            upsertMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'JOSEPH IDEMUDIA & CO.')
+            upsertMeta('meta[property="og:title"]', 'property', 'og:title', title)
+            upsertMeta('meta[property="og:description"]', 'property', 'og:description', description)
+            upsertMeta('meta[property="og:url"]', 'property', 'og:url', canonical)
+            upsertMeta('meta[property="og:image"]', 'property', 'og:image', ogImage)
+            upsertMeta('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image')
+            upsertMeta('meta[name="twitter:title"]', 'name', 'twitter:title', title)
+            upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', description)
+            upsertMeta('meta[name="twitter:image"]', 'name', 'twitter:image', ogImage)
+            upsertCanonical(canonical)
             trackPageView({
                 path: '/404',
-                title: 'Page Not Found | JOSEPH IDEMUDIA & CO.',
+                title,
             })
             return
         }
 
         const config = ROUTE_CONFIG[currentRoute]
+        const canonical = `${siteUrl}/#${currentRoute}`
         document.title = config.title
         upsertMeta('meta[name="description"]', 'name', 'description', config.description)
+        upsertMeta('meta[name="robots"]', 'name', 'robots', 'index, follow')
+        upsertMeta('meta[property="og:type"]', 'property', 'og:type', 'website')
+        upsertMeta('meta[property="og:site_name"]', 'property', 'og:site_name', 'JOSEPH IDEMUDIA & CO.')
         upsertMeta('meta[property="og:title"]', 'property', 'og:title', config.title)
         upsertMeta('meta[property="og:description"]', 'property', 'og:description', config.description)
-        upsertCanonical(`${window.location.origin}/#${currentRoute}`)
+        upsertMeta('meta[property="og:url"]', 'property', 'og:url', canonical)
+        upsertMeta('meta[property="og:image"]', 'property', 'og:image', ogImage)
+        upsertMeta('meta[name="twitter:card"]', 'name', 'twitter:card', 'summary_large_image')
+        upsertMeta('meta[name="twitter:title"]', 'name', 'twitter:title', config.title)
+        upsertMeta('meta[name="twitter:description"]', 'name', 'twitter:description', config.description)
+        upsertMeta('meta[name="twitter:image"]', 'name', 'twitter:image', ogImage)
+        upsertCanonical(canonical)
         trackPageView({
             path: currentRoute,
             title: config.title,

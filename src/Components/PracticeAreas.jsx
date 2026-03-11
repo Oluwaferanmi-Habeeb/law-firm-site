@@ -65,13 +65,16 @@ function PracticeAreas() {
             <div className="container-wide section-heading">
                 <p className="eyebrow dark">Our Expertise</p>
                 <h2>Our Practice Covers The Following Areas</h2>
+                <p className="section-intro">
+                    Select any practice area for a concise note on our advisory and representation scope.
+                </p>
             </div>
 
             <div className="container-wide areas-grid">
                 {areas.map((area) => (
                     <article className="area-card" key={area.title}>
                         <h3>{area.title}</h3>
-                        <a href="#practice-notes" onClick={scrollToNotes}>View Note</a>
+                        <a href="#practice-notes" onClick={scrollToNotes}>Read Summary</a>
                     </article>
                 ))}
             </div>

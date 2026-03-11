@@ -52,7 +52,7 @@ function HomeOverview() {
                     <article className="overview-card" key={item.title}>
                         <h3>{item.title}</h3>
                         <p>{item.text}</p>
-                        <a href={item.href}>Open Section</a>
+                        <a href={item.href}>View Details</a>
                     </article>
                 ))}
             </div>

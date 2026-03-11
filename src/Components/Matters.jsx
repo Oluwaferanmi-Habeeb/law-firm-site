@@ -11,6 +11,9 @@ function Matters() {
             <div className="container-wide section-heading">
                 <p className="eyebrow dark">Firm Strength</p>
                 <h2>Litigation and Advisory Capability</h2>
+                <p className="section-intro">
+                    Our teams are structured for focused delivery on contentious and advisory mandates.
+                </p>
             </div>
 
             <div className="container-wide matters-list">

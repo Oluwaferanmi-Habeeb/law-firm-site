@@ -23,6 +23,11 @@ Create a `.env` file (or configure in your host):
 ```bash
 # Contact form endpoint (recommended: Formspree/custom API)
 VITE_CONTACT_FORM_ENDPOINT=
+VITE_CONTACT_FORM_METHOD=POST
+VITE_CONTACT_RECIPIENT_EMAIL=josephidemudiaandco@yahoo.com
+
+# Public site URL for canonical/OG metadata (no trailing slash)
+VITE_SITE_URL=https://www.josephidemudiaandco.com
 
 # Optional Google Analytics 4
 VITE_GA_MEASUREMENT_ID=
@@ -34,8 +39,11 @@ VITE_CLIENT_ERROR_ENDPOINT=
 ## Contact Form Behavior
 
 - If `VITE_CONTACT_FORM_ENDPOINT` is set, the form posts JSON to that endpoint.
+- `VITE_CONTACT_FORM_METHOD` is optional for providers requiring a custom method.
 - If not set, form falls back to opening an email draft via `mailto:`.
 - Basic anti-spam checks are included (honeypot + minimum time gate).
+
+Note: do not put secrets in `VITE_*` values; if your provider needs a secret key, use a backend or serverless proxy.
 
 ## SEO / Production Assets
 

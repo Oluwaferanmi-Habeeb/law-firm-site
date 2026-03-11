@@ -1,6 +1,9 @@
 import { useState } from 'react'
 
-const CONTACT_ENDPOINT = import.meta.env.VITE_CONTACT_FORM_ENDPOINT || ''
+const CONTACT_ENDPOINT = (import.meta.env.VITE_CONTACT_FORM_ENDPOINT || '').trim()
+const CONTACT_METHOD = (import.meta.env.VITE_CONTACT_FORM_METHOD || 'POST').trim().toUpperCase()
+const CONTACT_RECIPIENT_EMAIL =
+    (import.meta.env.VITE_CONTACT_RECIPIENT_EMAIL || 'josephidemudiaandco@yahoo.com').trim()
 
 function Contact() {
     const MailIcon = () => (
@@ -84,9 +87,14 @@ function Contact() {
 
         try {
             if (CONTACT_ENDPOINT) {
+                const headers = {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                }
+
                 const response = await fetch(CONTACT_ENDPOINT, {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
+                    method: CONTACT_METHOD,
+                    headers,
                     body: JSON.stringify(payload),
                 })
 
@@ -98,7 +106,7 @@ function Contact() {
                 const body = encodeURIComponent(
                     `Name: ${payload.fullName}\nEmail: ${payload.email}\nPhone: ${payload.phone}\nCompany: ${payload.company}\n\nMessage:\n${payload.message}`
                 )
-                window.location.href = `mailto:josephidemudiaandco@yahoo.com?subject=${subject}&body=${body}`
+                window.location.href = `mailto:${CONTACT_RECIPIENT_EMAIL}?subject=${subject}&body=${body}`
             }
 
             setStatus('success')
@@ -195,6 +203,12 @@ function Contact() {
                         <button type="submit" className="btn btn-primary" disabled={status === 'submitting'}>
                             {status === 'submitting' ? 'Sending...' : 'Submit Inquiry'}
                         </button>
+                        {!CONTACT_ENDPOINT ? (
+                            <p className="form-feedback" role="status">
+                                Form currently opens your email app. Set <code>VITE_CONTACT_FORM_ENDPOINT</code> for
+                                direct form submission.
+                            </p>
+                        ) : null}
                         {feedback ? (
                             <p className={`form-feedback ${status === 'success' ? 'ok' : 'err'}`} role="status">
                                 {feedback}
@@ -205,10 +219,10 @@ function Contact() {
 
                 <div className="contact-card">
                     <p className="contact-meta"><MailIcon /><span><strong>Email:</strong> josephidemudiaandco@yahoo.com</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tell:</strong> 08055147009</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tell:</strong> 07060558979</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tell:</strong> 07086508404</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tell:</strong> 08067053452</span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 08055147009</span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 07060558979</span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 07086508404</span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 08067053452</span></p>
                     <p className="contact-meta">
                         <LocationIcon />
                         <span><strong>Office:</strong> Suite 82, Asucon Plaza, 513/515 Ikorodu Road, Ketu, Lagos</span>
@@ -225,7 +239,7 @@ function Contact() {
                             JIC Property
                         </a></span>
                     </p>
-                    <a href="mailto:josephidemudiaandco@yahoo.com" className="btn btn-primary">Send Email</a>
+                    <a href={`mailto:${CONTACT_RECIPIENT_EMAIL}`} className="btn btn-primary">Send Email</a>
                 </div>
             </div>
         </section>

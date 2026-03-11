@@ -1,34 +1,45 @@
 import { useEffect, useRef, useState } from 'react'
-import mpAdaora from '../assets/team-mp-adaora.svg'
-import mpChinedu from '../assets/team-mp-chinedu.svg'
-import assocIbrahim from '../assets/team-assoc-ibrahim.svg'
-import assocZainab from '../assets/team-assoc-zainab.svg'
+import salewaImage from '../assets/hero5.jpg'
+import josephImage from '../assets/hero6.jpg'
+import robertsImage from '../assets/hero7.jpg'
+import firmPhoto1 from '../assets/group1.jpg'
+import firmPhoto2 from '../assets/group2.jpg'
+import firmPhoto3 from '../assets/group3.jpg'
+import firmPhoto4 from '../assets/group4.jpg'
+import firmPhoto5 from '../assets/group5.jpg'
+import firmPhoto6 from '../assets/group6.jpg'
 
 const teamMembers = [
     {
         name: 'Asine Joseph Idemudia',
         role: 'Managing Partner',
-        bio: 'He is a graduate of Ambrose Alli University. He was called to the Nigerian Bar in 2004. He has worked in notable law firms in Lagos namely; Awokoya and Awokoya & Co, Lexx and Sophy and Chief Adesegun Adebayo & Co. Joseph posseses a vast experience in litigation, due diligence and regulatory compliance, labour law, family law, dispute resolution and arbitration proceedings, real estate and administration of estate matters. He is currently the Special Adviser to the Chairman of Oshodi Isolo Local Government Area.',
-        image: mpAdaora,
+        bio: 'Called to the Nigerian Bar in 2004, Joseph has led mandates across litigation, arbitration, real estate, and regulatory compliance. He has worked with leading Lagos firms including Awokoya and Awokoya & Co, Lexx and Sophy, and Chief Adesegun Adebayo & Co. He is currently Special Adviser to the Chairman of Oshodi Isolo LGA.',
+        image: josephImage,
+        mediaType: 'photo',
     },
     {
         name: 'Omosalewa Asine',
-        role: 'Partner / Chief Operating Officer',
-        bio: "Omosalewa Asine is the Chief Operating Officer of the firm. Her professional experience spans for over 20 years from banking at Gtbank Plc and Suntrust Bank Nigeria Ltd to core law practice and capital market at Balogun Adesegun Adebayo and Co and TOLG. She holds a Bachelor's Degree in Law from Olabisi Onabanjo University and several credit appraisal degrees. Salewa is versed in banking and finance, real estate, regulatory compliance, company secretarial services and corporate commercial practice.",
-        image: mpChinedu,
+        role: 'Partner / COO',
+        bio: "With 20+ years’ experience spanning banking, capital markets, and core legal practice, Salewa advises on banking and finance, corporate commercial matters, real estate, and regulatory compliance. She is a law graduate of Olabisi Onabanjo University and holds multiple credit appraisal certifications.",
+        image: salewaImage,
+        mediaType: 'photo',
     },
     {
         name: 'Ehianata Roberts Omoighe',
         role: 'Partner',
-        bio: 'He is a graduate of University of Benin. He was called to the Nigerian Bar in 2008. He worked in Office of Public Defender Ministry of Justice Anambra State, and he has also worked in law firms in Lagos namely; Ideh Patrick Laurence and Oye Akintola & Co. Ehianata is well versed in litigation, commercial transactions and real estate.',
-        image: assocIbrahim,
+        bio: 'Called to the Nigerian Bar in 2008, Roberts has advised on litigation, commercial transactions, and real estate. He previously served with the Office of the Public Defender, Anambra State, and practiced at Ideh Patrick Laurence and Oye Akintola & Co.',
+        image: robertsImage,
+        mediaType: 'photo',
     },
-    {
-        name: 'Olawuni Ebenezer',
-        role: 'Chambers Manager',
-        bio: 'He studied Computer Science from Lagos State Polytechnic and is a graduate of Information Technology Security, SMC University. Ebenezer specializes in office technology and management, and he is responsible for general administration and effective running of all sections in the firm.',
-        image: assocZainab,
-    },
+]
+
+const firmGallery = [
+    { src: firmPhoto1, alt: 'Firm group photo 1' },
+    { src: firmPhoto2, alt: 'Firm group photo 2' },
+    { src: firmPhoto3, alt: 'Firm group photo 3' },
+    { src: firmPhoto4, alt: 'Firm group photo 4' },
+    { src: firmPhoto5, alt: 'Firm group photo 5' },
+    { src: firmPhoto6, alt: 'Firm group photo 6' },
 ]
 
 function Team() {
@@ -68,7 +79,7 @@ function Team() {
             <div className="container-wide team-members-grid">
                 {teamMembers.map((person, index) => (
                     <article
-                        className={`profile-card partner-card reveal-card corner-${index + 1}`}
+                        className={`profile-card partner-card reveal-card corner-${index + 1} ${person.mediaType === 'photo' ? 'photo-card' : 'illustration-card'}`}
                         key={person.name}
                     >
                         <img src={person.image} alt={`${person.name} portrait`} loading="lazy" />
@@ -79,6 +90,23 @@ function Team() {
                         </div>
                     </article>
                 ))}
+            </div>
+
+            <div className="container-wide firm-gallery">
+                <div className="section-heading compact">
+                    <p className="eyebrow dark">Firm Gallery</p>
+                    <h3>Inside The Firm</h3>
+                    <p className="section-intro">
+                        A glimpse of our working environment and client spaces.
+                    </p>
+                </div>
+                <div className="firm-gallery-grid">
+                    {firmGallery.map((photo, index) => (
+                        <figure className="firm-gallery-card" key={`${photo.src}-${index}`}>
+                            <img src={photo.src} alt={photo.alt} loading="lazy" />
+                        </figure>
+                    ))}
+                </div>
             </div>
         </section>
     )
