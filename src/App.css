@@ -1062,13 +1062,19 @@ a:focus-visible {
 
 .subpage-hero {
   padding: 170px 0 80px;
-  background: linear-gradient(120deg, #101a28 0%, #1c2837 65%, #2a1f15 100%);
-  color: #f1f1f1;
+  background: linear-gradient(120deg, #192638 0%, #243347 65%, #3a2a1b 100%);
+  color: #ffffff;
 }
 
 .subpage-hero h1 {
   font-size: clamp(2.15rem, 5.1vw, 3.6rem);
   margin-bottom: 18px;
+  text-shadow: 0 10px 26px rgba(6, 10, 16, 0.55);
+}
+
+.subpage-hero .eyebrow {
+  color: #f6efe6;
+  text-shadow: 0 6px 16px rgba(6, 10, 16, 0.5);
 }
 
 .copyright {

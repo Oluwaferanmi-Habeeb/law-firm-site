@@ -128,6 +128,10 @@ function App() {
     }, [])
 
     useEffect(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }, [currentRoute])
+
+    useEffect(() => {
         initAnalytics()
         initErrorReporting()
     }, [])

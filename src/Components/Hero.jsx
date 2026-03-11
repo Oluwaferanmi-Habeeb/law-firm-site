@@ -6,18 +6,18 @@ import hero3 from '../assets/hero3.jpg'
 const slides = [
     {
         image: hero1,
-        title: 'Trusted Counsel For Complex Matters',
-        subtitle: 'Commercially focused legal advisory for institutions and private clients.',
+        title: 'Trusted Counsel',
+        subtitle: 'Commercially focused advisory for institutions and private clients.',
     },
     {
         image: hero2,
-        title: 'Strategic Advice. Clear Outcomes.',
-        subtitle: 'Supporting critical decisions with precision, discipline, and speed.',
+        title: 'Strategic Advice',
+        subtitle: 'Clear outcomes for complex mandates and urgent decisions.',
     },
     {
         image: hero3,
-        title: 'Built On Excellence And Integrity',
-        subtitle: 'Delivering dependable representation across transactions and disputes.',
+        title: 'Excellence And Integrity',
+        subtitle: 'Dependable representation across transactions and disputes.',
     },
 ]
 

@@ -87,6 +87,9 @@ function Contact() {
 
         try {
             if (CONTACT_ENDPOINT) {
+                const controller = new AbortController()
+                const timeoutId = setTimeout(() => controller.abort(), 12000)
+
                 const headers = {
                     'Content-Type': 'application/json',
                     Accept: 'application/json',
@@ -96,7 +99,10 @@ function Contact() {
                     method: CONTACT_METHOD,
                     headers,
                     body: JSON.stringify(payload),
+                    signal: controller.signal,
                 })
+
+                clearTimeout(timeoutId)
 
                 if (!response.ok) {
                     throw new Error('Contact endpoint failed.')
@@ -121,7 +127,12 @@ function Contact() {
                 website: '',
                 loadedAt: Date.now(),
             }))
-        } catch {
+        } catch (error) {
+            if (error?.name === 'AbortError') {
+                setStatus('error')
+                setFeedback('Request timed out. Please try again or email us directly.')
+                return
+            }
             setStatus('error')
             setFeedback('Unable to submit at the moment. Please try again.')
         }
@@ -210,7 +221,11 @@ function Contact() {
                             </p>
                         ) : null}
                         {feedback ? (
-                            <p className={`form-feedback ${status === 'success' ? 'ok' : 'err'}`} role="status">
+                            <p
+                                className={`form-feedback ${status === 'success' ? 'ok' : 'err'}`}
+                                role={status === 'success' ? 'status' : 'alert'}
+                                aria-live="polite"
+                            >
                                 {feedback}
                             </p>
                         ) : null}
