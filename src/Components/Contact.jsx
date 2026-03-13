@@ -217,7 +217,7 @@ function Contact() {
                         {!CONTACT_ENDPOINT ? (
                             <p className="form-feedback" role="status">
                                 Form currently opens your email app. Set <code>VITE_CONTACT_FORM_ENDPOINT</code> for
-                                direct form submission.
+                                direct form submission (for Vercel, you can use <code>/api/contact</code>).
                             </p>
                         ) : null}
                         {feedback ? (

@@ -23,6 +23,13 @@ npm run preview
 - Output directory: `dist`
 - Set any `VITE_*` env vars in Vercel Project Settings (they are injected at build time).
 
+### Optional: Server-Side Contact Form (`/api/contact`)
+
+This repo includes a Vercel Serverless Function at `api/contact.js` that can send contact emails via Resend.
+
+- Set `VITE_CONTACT_FORM_ENDPOINT=/api/contact`
+- In Vercel, set: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`
+
 ## Environment Variables
 
 Create a `.env` file (or configure in your host):
