@@ -233,11 +233,11 @@ function Contact() {
                 </div>
 
                 <div className="contact-card">
-                    <p className="contact-meta"><MailIcon /><span><strong>Email:</strong> josephidemudiaandco@yahoo.com</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 08055147009</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 07060558979</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 07086508404</span></p>
-                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> 08067053452</span></p>
+                    <p className="contact-meta"><MailIcon /><span><strong>Email:</strong> <a className="text-link" href={`mailto:${CONTACT_RECIPIENT_EMAIL}`}>{CONTACT_RECIPIENT_EMAIL}</a></span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> <a className="text-link" href="tel:08055147009">08055147009</a></span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> <a className="text-link" href="tel:07060558979">07060558979</a></span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> <a className="text-link" href="tel:07086508404">07086508404</a></span></p>
+                    <p className="contact-meta"><PhoneIcon /><span><strong>Tel:</strong> <a className="text-link" href="tel:08067053452">08067053452</a></span></p>
                     <p className="contact-meta">
                         <LocationIcon />
                         <span><strong>Office:</strong> Suite 82, Asucon Plaza, 513/515 Ikorodu Road, Ketu, Lagos</span>
@@ -249,7 +249,7 @@ function Contact() {
                             className="text-link"
                             href="https://www.linkedin.com/in/jic-property-2a61b8233"
                             target="_blank"
-                            rel="noreferrer"
+                            rel="noopener noreferrer"
                         >
                             JIC Property
                         </a></span>

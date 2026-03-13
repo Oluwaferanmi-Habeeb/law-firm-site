@@ -26,7 +26,7 @@ function Footer() {
                     <p>07086508404, 08067053452</p>
                     <p>Suite 82, Asucon Plaza, 513/515 Ikorodu Road, Ketu, Lagos</p>
                     <p>
-                        <a href="https://www.linkedin.com/in/jic-property-2a61b8233" target="_blank" rel="noreferrer">
+                        <a href="https://www.linkedin.com/in/jic-property-2a61b8233" target="_blank" rel="noopener noreferrer">
                             LinkedIn Profile
                         </a>
                     </p>

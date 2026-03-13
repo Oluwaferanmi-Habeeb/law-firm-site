@@ -14,7 +14,7 @@ function Resources() {
                     For current publications and announcements, please contact the firm directly or follow our official LinkedIn page.
                 </p>
                 <p>
-                    <a href="https://www.linkedin.com/in/jic-property-2a61b8233" target="_blank" rel="noreferrer">Visit LinkedIn</a>
+                    <a href="https://www.linkedin.com/in/jic-property-2a61b8233" target="_blank" rel="noopener noreferrer">Visit LinkedIn</a>
                 </p>
             </div>
         </section>

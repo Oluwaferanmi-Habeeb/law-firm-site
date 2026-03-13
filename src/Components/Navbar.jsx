@@ -24,8 +24,8 @@ function Navbar({ currentRoute }) {
     return (
         <header className="site-header">
             <div className="topbar container-wide">
-                <p className="topbar-item"><MailIcon /> Email: josephidemudiaandco@yahoo.com</p>
-                <p className="topbar-item"><PhoneIcon /> Tel: 08055147009</p>
+                <a className="topbar-item" href="mailto:josephidemudiaandco@yahoo.com"><MailIcon /> Email: josephidemudiaandco@yahoo.com</a>
+                <a className="topbar-item" href="tel:08055147009"><PhoneIcon /> Tel: 08055147009</a>
             </div>
 
             <nav className="navbar container-wide" aria-label="Main">

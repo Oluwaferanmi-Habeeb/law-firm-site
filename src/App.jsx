@@ -120,6 +120,19 @@ function App() {
     const isKnownRoute = Boolean(ROUTE_CONFIG[route])
     const currentRoute = isKnownRoute ? route : '/404'
     const isHome = currentRoute === '/'
+    const isNotFound = !isKnownRoute
+
+    const skipToContent = (event) => {
+        event.preventDefault()
+        const main = document.getElementById('main-content')
+        if (!main) return
+        main.scrollIntoView({ behavior: 'auto', block: 'start' })
+        try {
+            main.focus({ preventScroll: true })
+        } catch {
+            main.focus()
+        }
+    }
 
     useEffect(() => {
         const onHashChange = () => setRoute(getRoute())
@@ -226,17 +239,21 @@ function App() {
 
     return (
         <>
-            <a className="skip-link" href="#main-content">Skip to main content</a>
+            <a className="skip-link" href="#main-content" onClick={skipToContent}>Skip to main content</a>
             <Navbar currentRoute={currentRoute} />
             {isHome ? (
-                <main className="route-fade" key="home-route" id="main-content">
+                <main className="route-fade" key="home-route" id="main-content" tabIndex="-1">
                     <Hero />
                     <HomeOverview />
                     <WhyChooseUs />
                     <Contact />
                 </main>
+            ) : isNotFound ? (
+                <main className="subpage route-fade" key="not-found-route" id="main-content" tabIndex="-1">
+                    {renderRouteContent()}
+                </main>
             ) : (
-                <main className="subpage route-fade" key={currentRoute} id="main-content">
+                <main className="subpage route-fade" key={currentRoute} id="main-content" tabIndex="-1">
                     <section className="subpage-hero">
                         <div className="container-wide">
                             <p className="eyebrow">Joseph Idemudia & Co.</p>
