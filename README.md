@@ -16,6 +16,13 @@ npm run build
 npm run preview
 ```
 
+## Deploy to Vercel
+
+- Framework preset: `Vite`
+- Build command: `npm run build`
+- Output directory: `dist`
+- Set any `VITE_*` env vars in Vercel Project Settings (they are injected at build time).
+
 ## Environment Variables
 
 Create a `.env` file (or configure in your host):
