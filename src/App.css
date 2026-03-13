@@ -312,7 +312,7 @@ a:focus-visible {
 }
 
 .hero .eyebrow {
-  text-shadow: none;
+  text-shadow: 0 6px 14px rgba(6, 9, 14, 0.5);
 }
 
 .hero-actions {
