@@ -215,9 +215,8 @@ function Contact() {
                             {status === 'submitting' ? 'Sending...' : 'Submit Inquiry'}
                         </button>
                         {!CONTACT_ENDPOINT ? (
-                            <p className="form-feedback" role="status">
-                                Form currently opens your email app. Set <code>VITE_CONTACT_FORM_ENDPOINT</code> for
-                                direct form submission (for Vercel, you can use <code>/api/contact</code>).
+                            <p className="form-feedback" role="note">
+                                Submitting this form will open your email app.
                             </p>
                         ) : null}
                         {feedback ? (
