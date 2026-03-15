@@ -50,6 +50,15 @@ function Team() {
         const section = sectionRef.current
         if (!section) return
 
+        if (!('IntersectionObserver' in window)) {
+            setVisible(true)
+            return
+        }
+
+        const fallbackTimer = window.setTimeout(() => {
+            setVisible(true)
+        }, 1200)
+
         const observer = new IntersectionObserver(
             (entries) => {
                 entries.forEach((entry) => {
@@ -63,7 +72,10 @@ function Team() {
         )
 
         observer.observe(section)
-        return () => observer.disconnect()
+        return () => {
+            observer.disconnect()
+            window.clearTimeout(fallbackTimer)
+        }
     }, [])
 
     return (
