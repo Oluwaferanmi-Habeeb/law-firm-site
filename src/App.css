@@ -475,17 +475,25 @@ a:focus-visible {
   padding-top: var(--space-3);
 }
 
-.values-grid article {
+.values-grid article,
+.about-details-grid article {
   background: #fff;
   border: 1px solid #d4cabd;
   padding: 18px;
   box-shadow: 0 10px 24px rgba(17, 32, 50, 0.05);
 }
 
-.values-grid h3 {
+.values-grid h3,
+.about-details-grid h3 {
   font-size: 1.42rem;
   color: var(--primary);
   margin-bottom: 10px;
+}
+
+.about-details-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-2);
 }
 
 .team {
@@ -1114,6 +1122,7 @@ a:focus-visible {
   }
 
   .about-grid,
+  .about-details-grid,
   .team-members-grid,
   .why-us-layout,
   .contact-layout,
