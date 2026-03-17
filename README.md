@@ -30,7 +30,7 @@ VITE_CONTACT_RECIPIENT_EMAIL=josephidemudiaandco@yahoo.com
 VITE_SITE_URL=https://www.josephidemudiaandco.com
 
 # Optional Google Analytics 4
-VITE_GA_MEASUREMENT_ID=
+VITE_GA_MEASUREMENT_ID
 
 # Optional client error reporting endpoint
 VITE_CLIENT_ERROR_ENDPOINT=
