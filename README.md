@@ -2,21 +2,7 @@
 
 Professional law-firm website built with React + Vite.
 
-## Run Locally
 
-```bash
-npm install
-npm run dev
-```
-
-## Production Build
-
-```bash
-npm run build
-npm run preview
-```
-
-## Deploy to Vercel
 
 - Framework preset: `Vite`
 - Build command: `npm run build`
