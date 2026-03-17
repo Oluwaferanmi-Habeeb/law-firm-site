@@ -13,7 +13,7 @@ Professional law-firm website built with React + Vite.
 
 This repo includes a Vercel Serverless Function at `api/contact.js` that can send contact emails via Resend.
 
-- Set `VITE_CONTACT_FORM_ENDPOINT=/api/contact`
+- Set`VITE_CONTACT_FORM_ENDPOINT=/api/contact`
 - In Vercel, set: `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`
 
 ## Environment Variables
