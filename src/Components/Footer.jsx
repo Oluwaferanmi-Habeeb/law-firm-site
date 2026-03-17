@@ -5,10 +5,10 @@ function Footer() {
                 <div>
                     <h3>JOSEPH IDEMUDIA & CO.</h3>
                     <p>Legal Practitioners & Consultants.</p>
-                    <p><a href="#/resources">Resources</a></p>
-                    <p><a href="#/careers">Careers</a></p>
-                    <p><a href="#/privacy-policy">Privacy Policy</a></p>
-                    <p><a href="#/disclaimer">Disclaimer</a></p>
+                    <p><a href="/resources">Resources</a></p>
+                    <p><a href="/careers">Careers</a></p>
+                    <p><a href="/privacy-policy">Privacy Policy</a></p>
+                    <p><a href="/disclaimer">Disclaimer</a></p>
                 </div>
 
                 <div>

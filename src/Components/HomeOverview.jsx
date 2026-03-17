@@ -2,37 +2,37 @@ const previews = [
     {
         title: 'The Firm',
         text: 'Profile, values, and approach to client service.',
-        href: '#/about',
+        href: '/about',
     },
     {
         title: 'Our People',
         text: 'Managing partner, partners, and leadership team.',
-        href: '#/people',
+        href: '/people',
     },
     {
         title: 'Expertise',
         text: 'Core legal practice areas and advisory focus.',
-        href: '#/expertise',
+        href: '/expertise',
     },
     {
         title: 'Client Profile',
         text: 'Local and multinational corporations, institutions, and individuals.',
-        href: '#/industries',
+        href: '/industries',
     },
     {
         title: 'Firm Strength',
         text: 'Litigation and advisory capability across multiple forums.',
-        href: '#/matters',
+        href: '/matters',
     },
     {
         title: 'Resources',
         text: 'Publications and legal commentary.',
-        href: '#/resources',
+        href: '/resources',
     },
     {
         title: 'Careers',
         text: 'Professional opportunities and graduate pathways.',
-        href: '#/careers',
+        href: '/careers',
     },
 ]
 

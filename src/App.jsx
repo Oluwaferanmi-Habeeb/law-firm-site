@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useState } from 'react'
 import Navbar from './Components/Navbar'
 import Hero from './Components/Hero'
 import About from './Components/About'
@@ -90,9 +90,24 @@ const ROUTE_CONFIG = {
     },
 }
 
+const normalizePath = (path) => {
+    if (!path) return '/'
+    const cleaned = path.split('?')[0].split('#')[0]
+    if (!cleaned || cleaned === '/') return '/'
+    return cleaned.replace(/\/+$/, '')
+}
+
 const getRoute = () => {
-    const hash = window.location.hash || '#/'
-    return hash.slice(1).split('?')[0] || '/'
+    const hash = window.location.hash || ''
+    if (hash.startsWith('#/')) {
+        const fromHash = normalizePath(hash.slice(1))
+        const target = fromHash === '/' ? '/' : fromHash
+        if (window.location.pathname !== target) {
+            window.history.replaceState({}, '', target)
+        }
+        return fromHash
+    }
+    return normalizePath(window.location.pathname)
 }
 
 const upsertMeta = (selector, attr, key, value) => {
@@ -134,11 +149,41 @@ function App() {
         }
     }
 
+    const navigate = useCallback(
+        (path) => {
+            const next = normalizePath(path)
+            if (next === route) return
+            window.history.pushState({}, '', next === '/' ? '/' : next)
+            setRoute(next)
+        },
+        [route]
+    )
+
     useEffect(() => {
-        const onHashChange = () => setRoute(getRoute())
-        window.addEventListener('hashchange', onHashChange)
-        return () => window.removeEventListener('hashchange', onHashChange)
+        const onPopState = () => setRoute(getRoute())
+        window.addEventListener('popstate', onPopState)
+        return () => window.removeEventListener('popstate', onPopState)
     }, [])
+
+    useEffect(() => {
+        const handleClick = (event) => {
+            if (event.defaultPrevented) return
+            const anchor = event.target.closest('a')
+            if (!anchor) return
+            const href = anchor.getAttribute('href')
+            if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) {
+                return
+            }
+            if (anchor.target && anchor.target !== '_self') return
+            const url = new URL(anchor.href, window.location.origin)
+            if (url.origin !== window.location.origin) return
+            event.preventDefault()
+            navigate(url.pathname)
+        }
+
+        document.addEventListener('click', handleClick)
+        return () => document.removeEventListener('click', handleClick)
+    }, [navigate])
 
     useEffect(() => {
         window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -156,7 +201,7 @@ function App() {
         if (!isKnownRoute) {
             const title = 'Page Not Found | JOSEPH IDEMUDIA & CO.'
             const description = 'The page you requested does not exist.'
-            const canonical = `${siteUrl}/#/404`
+            const canonical = `${siteUrl}/404`
 
             document.title = title
             upsertMeta('meta[name="description"]', 'name', 'description', description)
@@ -180,7 +225,7 @@ function App() {
         }
 
         const config = ROUTE_CONFIG[currentRoute]
-        const canonical = `${siteUrl}/#${currentRoute}`
+        const canonical = currentRoute === '/' ? `${siteUrl}/` : `${siteUrl}${currentRoute}`
         document.title = config.title
         upsertMeta('meta[name="description"]', 'name', 'description', config.description)
         upsertMeta('meta[name="robots"]', 'name', 'robots', 'index, follow')
@@ -230,7 +275,7 @@ function App() {
                             <p className="eyebrow dark">404</p>
                             <h2>Page Not Found</h2>
                             <p>The page you requested does not exist.</p>
-                            <a href="#/" className="btn btn-primary">Back To Home</a>
+                            <a href="/" className="btn btn-primary">Back To Home</a>
                         </div>
                     </section>
                 )
@@ -258,7 +303,7 @@ function App() {
                         <div className="container-wide">
                             <p className="eyebrow">Joseph Idemudia & Co.</p>
                             <h1>{ROUTE_CONFIG[currentRoute]?.heading || 'Our Firm'}</h1>
-                            <a href="#/" className="btn btn-primary">Back To Home</a>
+                            <a href="/" className="btn btn-primary">Back To Home</a>
                         </div>
                     </section>
                     {renderRouteContent()}

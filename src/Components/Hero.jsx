@@ -58,8 +58,8 @@ function Hero() {
                         </>
                     ) : null}
                     <div className="hero-actions">
-                        <a href="#/about" className="btn btn-primary">View The Firm</a>
-                        <a href="#/contact" className="btn btn-outline">Contact Us</a>
+                        <a href="/about" className="btn btn-primary">View The Firm</a>
+                        <a href="/contact" className="btn btn-outline">Contact Us</a>
                     </div>
                 </div>
             </div>

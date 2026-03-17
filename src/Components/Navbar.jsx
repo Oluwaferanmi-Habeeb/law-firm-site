@@ -15,8 +15,9 @@ function Navbar({ currentRoute }) {
 
     const goHome = (event) => {
         event.preventDefault()
-        if (window.location.hash !== '#/') {
-            window.location.hash = '#/'
+        if (window.location.pathname !== '/') {
+            window.history.pushState({}, '', '/')
+            window.dispatchEvent(new PopStateEvent('popstate'))
         }
         window.scrollTo({ top: 0, behavior: 'smooth' })
     }
@@ -29,14 +30,14 @@ function Navbar({ currentRoute }) {
             </div>
 
             <nav className="navbar container-wide" aria-label="Main">
-                <a className="brand" href="#/" onClick={goHome}>JOSEPH IDEMUDIA & CO.</a>
+                <a className="brand" href="/" onClick={goHome}>JOSEPH IDEMUDIA & CO.</a>
 
                 <div className="nav-links">
-                    <a href="#/" onClick={goHome} aria-current={currentRoute === '/' ? 'page' : undefined}>Home</a>
-                    <a href="#/about" aria-current={currentRoute === '/about' ? 'page' : undefined}>The Firm</a>
-                    <a href="#/people" aria-current={currentRoute === '/people' ? 'page' : undefined}>Our People</a>
-                    <a href="#/expertise" aria-current={currentRoute === '/expertise' ? 'page' : undefined}>Expertise</a>
-                    <a href="#/contact" aria-current={currentRoute === '/contact' ? 'page' : undefined}>Contact</a>
+                    <a href="/" onClick={goHome} aria-current={currentRoute === '/' ? 'page' : undefined}>Home</a>
+                    <a href="/about" aria-current={currentRoute === '/about' ? 'page' : undefined}>The Firm</a>
+                    <a href="/people" aria-current={currentRoute === '/people' ? 'page' : undefined}>Our People</a>
+                    <a href="/expertise" aria-current={currentRoute === '/expertise' ? 'page' : undefined}>Expertise</a>
+                    <a href="/contact" aria-current={currentRoute === '/contact' ? 'page' : undefined}>Contact</a>
                 </div>
             </nav>
         </header>
