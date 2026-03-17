@@ -21,9 +21,17 @@ function Footer() {
 
                 <div>
                     <h4>Get In Touch</h4>
-                    <p>josephidemudiaandco@yahoo.com</p>
-                    <p>08055147009, 07060558979</p>
-                    <p>07086508404, 08067053452</p>
+                    <p>
+                        <a href="mailto:josephidemudiaandco@yahoo.com">josephidemudiaandco@yahoo.com</a>
+                    </p>
+                    <p>
+                        <a href="tel:+2348055147009">08055147009</a>,{' '}
+                        <a href="tel:+2347060558979">07060558979</a>
+                    </p>
+                    <p>
+                        <a href="tel:+2347086508404">07086508404</a>,{' '}
+                        <a href="tel:+2348067053452">08067053452</a>
+                    </p>
                     <p>Suite 82, Asucon Plaza, 513/515 Ikorodu Road, Ketu, Lagos</p>
                     <p>
                         <a href="https://www.linkedin.com/in/jic-property-2a61b8233" target="_blank" rel="noopener noreferrer">

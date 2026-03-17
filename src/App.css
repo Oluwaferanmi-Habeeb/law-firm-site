@@ -1068,6 +1068,19 @@ a:focus-visible {
   border-color: rgba(255, 241, 217, 0.9);
 }
 
+/* Normalize iOS auto-detected phone/email link styling */
+a[x-apple-data-detectors],
+a[x-apple-data-detectors-type='telephone'],
+a[x-apple-data-detectors-type='email'],
+a[href^='tel:'],
+a[href^='mailto:'] {
+  color: inherit !important;
+  text-decoration: none !important;
+  font-size: inherit !important;
+  font-family: inherit !important;
+  font-weight: inherit !important;
+}
+
 .subpage-hero {
   padding: 170px 0 80px;
   background: linear-gradient(120deg, #192638 0%, #243347 65%, #3a2a1b 100%);
