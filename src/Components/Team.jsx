@@ -3,10 +3,7 @@ import salewaImage from '../assets/hero5.jpg'
 import josephImage from '../assets/hero6.jpg'
 import robertsImage from '../assets/hero7.jpg'
 import firmPhoto1 from '../assets/group1.jpg'
-import firmPhoto2 from '../assets/group2.jpg'
-import firmPhoto3 from '../assets/group3.jpg'
 import firmPhoto4 from '../assets/group4.jpg'
-import firmPhoto5 from '../assets/group5.jpg'
 import firmPhoto6 from '../assets/group6.jpg'
 
 const teamMembers = [
@@ -35,10 +32,7 @@ const teamMembers = [
 
 const firmGallery = [
     { src: firmPhoto1, alt: 'Firm group photo 1' },
-    { src: firmPhoto2, alt: 'Firm group photo 2' },
-    { src: firmPhoto3, alt: 'Firm group photo 3' },
     { src: firmPhoto4, alt: 'Firm group photo 4' },
-    { src: firmPhoto5, alt: 'Firm group photo 5' },
     { src: firmPhoto6, alt: 'Firm group photo 6' },
 ]
 
