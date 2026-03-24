@@ -1,6 +1,6 @@
 # JOSEPH IDEMUDIA & CO. Website.
 
-Professional law-firm website built with React + Vite
+Professional law-firm website built with React + Vite.
 
 
 
