@@ -34,25 +34,19 @@ function ClientAppreciation() {
                     <p className="eyebrow dark">Client Appreciation</p>
                     <h2>Happy Birthday, Mrs. Nwakpa</h2>
                     <p className="appreciation-lead">
-                        On this special day, as we celebrate your birthday, we want to take a moment to express our
-                        deepest gratitude for the trust and partnership you have shared with us over the years. You
-                        have been far more than a valued client — you have become an integral part of our firm’s story.
+                        Today, we celebrate not just another year, but a life marked by purpose, resilience and
+                        remarkable achievements.
                     </p>
                     <p>
-                        Through every challenge, milestone, and success, we have been honored to stand beside you,
-                        safeguarding what matters most in your life. Your unwavering loyalty and the confidence you
-                        place in our team continue to inspire us to deliver not only exceptional legal expertise, but
-                        also genuine care, dedication, and personal attention with every matter we handle for you.
+                        On behalf of everyone at Joseph Idemudia &amp; Co., we are honoured to celebrate you and the
+                        impact you continue to make. Your dedication, vision and excellence remain truly inspiring,
+                        and it is always a privilege to work alongside you.
                     </p>
                     <p>
-                        Thank you for allowing us to walk this journey with you. On your birthday, we wish you abundant
-                        joy, good health, and continued success in all your endeavors. We deeply value the strong
-                        relationship we have built together and remain wholeheartedly committed to serving you with
-                        integrity and excellence for many years to come.
+                        As you mark this special day, we wish you continued success, good health and even greater
+                        accomplishments in the years ahead.
                     </p>
-                    <p>
-                        You are more than a long-standing client to us — you are truly cherished family. Happy Birthday!
-                    </p>
+                    <p>Happy Birthday once again!🎉</p>
                     <p className="appreciation-signoff">With appreciation, JOSEPH IDEMUDIA &amp; CO.</p>
                 </div>
             </div>
