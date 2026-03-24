@@ -1,23 +1,13 @@
 import { useEffect, useState } from 'react'
 import appreciationImage from '../assets/newpaare.jpg'
 
-const APPRECIATION_KEY = 'jic_appreciation_start'
-const APPRECIATION_WINDOW_MS = 36 * 60 * 60 * 1000
+const APPRECIATION_EXPIRES_AT = new Date('2026-03-26T07:54:10Z').getTime()
 
 function ClientAppreciation() {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
-        try {
-            const stored = window.localStorage.getItem(APPRECIATION_KEY)
-            const start = stored ? Number(stored) : Date.now()
-            if (!stored) {
-                window.localStorage.setItem(APPRECIATION_KEY, String(start))
-            }
-            setVisible(Date.now() - start <= APPRECIATION_WINDOW_MS)
-        } catch {
-            setVisible(true)
-        }
+        setVisible(Date.now() <= APPRECIATION_EXPIRES_AT)
     }, [])
 
     if (!visible) {
