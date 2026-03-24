@@ -957,8 +957,9 @@ a:focus-visible {
 .appreciation-media img {
   width: 100%;
   height: 100%;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
   object-fit: cover;
+  object-position: 50% 20%;
   display: block;
 }
 
