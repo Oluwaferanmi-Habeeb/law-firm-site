@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import appreciationImage from '../assets/appreciation.jpg'
+import appreciationImage from '../assets/newpaare.jpg'
 
 const APPRECIATION_KEY = 'jic_appreciation_start'
 const APPRECIATION_WINDOW_MS = 36 * 60 * 60 * 1000
@@ -25,29 +25,27 @@ function ClientAppreciation() {
     }
 
     return (
-        <section className="client-appreciation section" id="appreciation">
+        <section className="client-appreciation section" id="news-publications">
             <div className="container-wide appreciation-grid">
                 <div className="appreciation-media">
-                    <img src={appreciationImage} alt="Mrs. Nwakpa" loading="lazy" />
+                    <img src={appreciationImage} alt="Client appreciation" loading="lazy" />
                 </div>
                 <div className="appreciation-content">
-                    <p className="eyebrow dark">Client Appreciation</p>
-                    <h2>Happy Birthday, Mrs. Nwakpa</h2>
+                    <p className="eyebrow dark">News &amp; Publications</p>
+                    <h2>Client Appreciation</h2>
                     <p className="appreciation-lead">
-                        Today, we celebrate not just another year, but a life marked by purpose, resilience and
+                        Today, we celebrate not just another year, but a life marked by purpose, resilience, and
                         remarkable achievements.
                     </p>
                     <p>
                         On behalf of everyone at Joseph Idemudia &amp; Co., we are honoured to celebrate you and the
-                        impact you continue to make. Your dedication, vision and excellence remain truly inspiring,
+                        impact you continue to make. Your dedication, vision, and excellence remain truly inspiring,
                         and it is always a privilege to work alongside you.
                     </p>
                     <p>
-                        As you mark this special day, we wish you continued success, good health and even greater
-                        accomplishments in the years ahead.
+                        As you mark this special day, we wish you continued success, good health, and even greater
+                        accomplishments in the years ahead. We are grateful for the trust and partnership we share.
                     </p>
-                    <p>Happy Birthday once again!🎉</p>
-                    <p className="appreciation-signoff">With appreciation, JOSEPH IDEMUDIA &amp; CO.</p>
                 </div>
             </div>
         </section>

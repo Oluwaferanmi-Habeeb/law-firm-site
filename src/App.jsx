@@ -67,6 +67,12 @@ const ROUTE_CONFIG = {
         description:
             'Legal resources, publications, and commentary from JOSEPH IDEMUDIA & CO.',
     },
+    '/news': {
+        title: 'News & Publications | JOSEPH IDEMUDIA & CO.',
+        heading: 'News & Publications',
+        description:
+            'Firm announcements, client celebrations, and publications from JOSEPH IDEMUDIA & CO.',
+    },
     '/careers': {
         title: 'Careers | JOSEPH IDEMUDIA & CO.',
         heading: 'Careers',
@@ -261,6 +267,8 @@ function App() {
                 return <Matters />
             case '/resources':
                 return <Resources />
+            case '/news':
+                return <ClientAppreciation />
             case '/careers':
                 return <Careers />
             case '/privacy-policy':
@@ -292,7 +300,6 @@ function App() {
                     <Hero />
                     <HomeOverview />
                     <WhyChooseUs />
-                    <ClientAppreciation />
                     <Contact />
                 </main>
             ) : isNotFound ? (

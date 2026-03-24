@@ -36,6 +36,11 @@
     <priority>0.6</priority>
   </url>
   <url>
+    <loc>https://www.josephidemudia.co/news/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://www.josephidemudia.co/careers/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
