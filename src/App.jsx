@@ -7,6 +7,7 @@ import PracticeAreas from './Components/PracticeAreas'
 import Industries from './Components/Industries'
 import Matters from './Components/Matters'
 import WhyChooseUs from './Components/WhyChooseUs'
+import ClientAppreciation from './Components/ClientAppreciation'
 import HomeOverview from './Components/HomeOverview'
 import Resources from './Components/Resources'
 import Careers from './Components/Careers'
@@ -291,6 +292,7 @@ function App() {
                     <Hero />
                     <HomeOverview />
                     <WhyChooseUs />
+                    <ClientAppreciation />
                     <Contact />
                 </main>
             ) : isNotFound ? (

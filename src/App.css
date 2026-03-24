@@ -934,6 +934,43 @@ a:focus-visible {
   background: #fff;
 }
 
+.client-appreciation {
+  background: #fbf8f3;
+  border-top: 1px solid var(--line-soft);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.appreciation-grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 36px;
+  align-items: center;
+}
+
+.appreciation-media {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-sm);
+}
+
+.appreciation-media img {
+  width: 100%;
+  height: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  display: block;
+}
+
+.appreciation-content p + p {
+  margin-top: 12px;
+}
+
+.appreciation-signoff {
+  font-weight: 600;
+  color: var(--primary);
+}
+
 .contact {
   background: #f6f0e7;
   border-top: 1px solid var(--line-soft);
@@ -1138,6 +1175,7 @@ a[href^='mailto:'] {
 
   .about-grid,
   .about-details-grid,
+  .appreciation-grid,
   .team-members-grid,
   .why-us-layout,
   .contact-layout,
