@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import appreciationImage from '../assets/birthday.jpg'
+import appreciationImage from '../assets/new.jpg'
 
 const APPRECIATION_EXPIRES_AT = new Date('2026-03-26T07:54:10Z').getTime()
 
