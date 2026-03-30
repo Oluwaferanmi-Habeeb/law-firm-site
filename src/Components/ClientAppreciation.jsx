@@ -1,20 +1,7 @@
-import { useEffect, useState } from 'react'
 import appreciationImage from '../assets/new.jpg'
 import ntaiImage from '../assets/ntai.jpg'
 
-const APPRECIATION_EXPIRES_AT = new Date('2026-03-26T07:54:10Z').getTime()
-
 function ClientAppreciation() {
-    const [visible, setVisible] = useState(false)
-
-    useEffect(() => {
-        setVisible(Date.now() <= APPRECIATION_EXPIRES_AT)
-    }, [])
-
-    if (!visible) {
-        return null
-    }
-
     return (
         <section className="client-appreciation section" id="news-publications">
             <div className="container-wide">
