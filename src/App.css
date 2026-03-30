@@ -940,6 +940,16 @@ a:focus-visible {
   border-bottom: 1px solid var(--line-soft);
 }
 
+.client-appreciation h2 {
+  margin-bottom: 20px;
+}
+
+.news-collection {
+  display: grid;
+  gap: 48px;
+  margin-top: 24px;
+}
+
 .appreciation-grid {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
@@ -966,6 +976,12 @@ a:focus-visible {
   object-position: center;
   background: transparent;
   display: block;
+}
+
+.appreciation-content h3 {
+  font-size: 1.3rem;
+  margin: 0 0 12px;
+  color: var(--text);
 }
 
 .appreciation-content p + p {
