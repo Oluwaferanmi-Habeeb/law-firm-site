@@ -1,6 +1,29 @@
+import { useEffect, useState } from 'react'
 import ntaiImage from '../assets/ntai.jpg'
 
+const APPRECIATION_EXPIRY_KEY = 'jic_news_expiry_v1'
+const APPRECIATION_DURATION_MS = 36 * 60 * 60 * 1000
+
 function ClientAppreciation() {
+    const [visible, setVisible] = useState(false)
+
+    useEffect(() => {
+        const storedExpiry = Number(localStorage.getItem(APPRECIATION_EXPIRY_KEY))
+        const expiry = Number.isFinite(storedExpiry) && storedExpiry > 0
+            ? storedExpiry
+            : Date.now() + APPRECIATION_DURATION_MS
+
+        if (!storedExpiry || !Number.isFinite(storedExpiry)) {
+            localStorage.setItem(APPRECIATION_EXPIRY_KEY, String(expiry))
+        }
+
+        setVisible(Date.now() <= expiry)
+    }, [])
+
+    if (!visible) {
+        return null
+    }
+
     return (
         <section className="client-appreciation section" id="news-publications">
             <div className="container-wide">
