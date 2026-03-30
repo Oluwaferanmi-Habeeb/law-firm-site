@@ -58,4 +58,4 @@ The project includes:
 ## Notes
 
 - Current navigation uses hash routes (`#/...`) for static hosting, compatibility.
-- Update `sitemap.xml` and canonical domain if your final production domain differs.
+- Update `sitemap.xml` and canonical domain if your final production, domain differs.
