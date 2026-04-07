@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import ntaiImage from '../assets/ntai.jpg'
+import internImage from '../assets/tobias-intern.jpg'
 
 const APPRECIATION_EXPIRY_KEY = 'jic_news_expiry_v1'
-const APPRECIATION_DURATION_MS = 36 * 60 * 60 * 1000
+const APPRECIATION_DURATION_MS = 7 * 24 * 60 * 60 * 1000
 
 function ClientAppreciation() {
     const [visible, setVisible] = useState(false)
@@ -32,22 +32,20 @@ function ClientAppreciation() {
                 <div className="news-collection">
                     <div className="appreciation-grid">
                         <div className="appreciation-media">
-                            <img src={ntaiImage} alt="Mr Ntai Bagshaw birthday tribute" loading="lazy" />
+                            <img src={internImage} alt="Tobias Okonkwo welcome announcement" loading="lazy" />
                         </div>
                         <div className="appreciation-content">
-                            <h3>Mr Ntai Bagshaw</h3>
+                            <h3>Welcome, Tobias Okonkwo</h3>
                             <p className="appreciation-lead">
-                                Today we celebrate you and the excellence, resilience, and dedication that define your
-                                journey.
+                                Joseph Idemudia &amp; Co. is pleased to welcome our newest intern, Tobias Okonkwo.
                             </p>
                             <p>
-                                From all of us at Joseph Idemudia &amp; Co., please accept our heartfelt appreciation.
-                                Your character, achievements, and the way you lead continue to inspire those around
-                                you, and it is a privilege to stand with you.
+                                We are delighted to have you join the team and look forward to the insight, energy,
+                                and commitment you bring. This is a space for learning, growth, and meaningful
+                                contribution, and we’re excited to see you thrive.
                             </p>
                             <p>
-                                We wish you a year filled with greater success, fulfilment, and joy. Happy birthday,
-                                and thank you for the trust and partnership we share.
+                                Welcome aboard, Tobias — we’re glad to have you with us.
                             </p>
                         </div>
                     </div>
