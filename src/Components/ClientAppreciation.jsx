@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import internImage from '../assets/tobias-intern.jpg'
 
-const APPRECIATION_EXPIRY_KEY = 'jic_news_expiry_v1'
+const APPRECIATION_EXPIRY_KEY = 'jic_news_expiry_v2'
 const APPRECIATION_DURATION_MS = 7 * 24 * 60 * 60 * 1000
 
 function ClientAppreciation() {
@@ -9,15 +9,16 @@ function ClientAppreciation() {
 
     useEffect(() => {
         const storedExpiry = Number(localStorage.getItem(APPRECIATION_EXPIRY_KEY))
-        const expiry = Number.isFinite(storedExpiry) && storedExpiry > 0
+        const now = Date.now()
+        const expiry = Number.isFinite(storedExpiry) && storedExpiry > now
             ? storedExpiry
-            : Date.now() + APPRECIATION_DURATION_MS
+            : now + APPRECIATION_DURATION_MS
 
-        if (!storedExpiry || !Number.isFinite(storedExpiry)) {
+        if (!Number.isFinite(storedExpiry) || storedExpiry <= now) {
             localStorage.setItem(APPRECIATION_EXPIRY_KEY, String(expiry))
         }
 
-        setVisible(Date.now() <= expiry)
+        setVisible(now <= expiry)
     }, [])
 
     if (!visible) {
